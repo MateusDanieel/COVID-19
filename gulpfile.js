@@ -77,7 +77,7 @@ function img() {
 }
 
 function att() {
-    watch(['./src/assets/css/*.css'], css);
+    watch(['./src/assets/scss/*.scss'], css);
 
     watch(['./src/assets/js/*.js'], js);
 
