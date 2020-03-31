@@ -1,3 +1,4 @@
+//lista de sintomas e suas pontuações
 const sintomas = {
     febre:         [0, 16.5, 21.8, 29.1],   
     tosseSeca:     [0, 12.6, 22.5, 16.8],
@@ -13,6 +14,7 @@ const sintomas = {
     tosseSangue:   [0, 0.1, 0.2, 0.3],
     olhosInchados: [0, 0.1, 0.2, 0.3],
 }
+//calcula a pontuação que o usuario teve de acordo com os sintomas
 function calcular(){
     let pontuacao = 0;
     let febre  = 0;
@@ -25,6 +27,7 @@ function calcular(){
     }
     return {pontuacao, febre, faltaAr};
 }
+//retorna a probabilidade de estar infectado (Alta, moderada baixa) no html
 function resultado(){
     let result = calcular();
     if(result.pontuacao >= 70 || (result.febre == 1 && result.faltaAr == 1)){
@@ -34,4 +37,13 @@ function resultado(){
     }else{
         document.querySelector().innerHTML('Baixa');
     }
+}
+//retorna um objeto com os sintomas do usuario EX {febre:1, faltaAr:0}
+function sintomasUser(){
+    let sintomasPresentes = {};
+    for(prop in sintomas){
+        let indice = document.querySelector(`#${prop}`).value;
+        (sintomas[prop][indice] >= 1) ? sintomasPresentes[prop] = 1 : sintomasPresentes[prop] = 0;
+    }
+    return sintomasPresentes;
 }
