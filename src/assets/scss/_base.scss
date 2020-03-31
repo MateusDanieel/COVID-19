@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $white: #FFF;
-$gray: #999;
+$concrete: #95a5a6;
+$peteriver: #3498db;
+$midnblue: #2c3e50;
+$silver: #bdc3c7;
+$clouds: #ecf0f1;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
 
 html {
     position: relative;
     min-height: 100%;
+    padding-bottom: 30px;   
 }
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-color: #F0F0F0;
 }
 
 .container {
@@ -22,12 +32,111 @@ body {
     margin: 0 auto;
 }
 
-footer {
+.form {
+    background-color: #FFF;
+    padding: 20px 40px;
+    margin: 20px;
+    box-shadow: 0 0 3px rgba($midnblue, .1);
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $midnblue;
+        text-align: center;
+    }
+
+    p {
+        color: $concrete;
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    .label {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        color: $midnblue;
+        font-weight: 600;
+
+        i {
+            color: rgba($midnblue, 0.2);
+            width: 50px;
+        }
+    }
+
+    .radio-alt {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &.half {
+            width: 50%;
+
+            input {
+                & + label {
+                    width: 45%;
+                }
+            }
+        }
+
+        input {
+            display: none;
+
+            & + label {
+                background-color: rgba($concrete, 0.2);
+                padding: 15px 0;
+                width: 23.5%;
+                font-size: 16px;
+                font-weight: 600;
+                color: $midnblue;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                border-radius: 4px;
+                border: 2px solid transparent;
+                transition: 0.3s;
+            }
+
+            &:hover + label {
+                color: $peteriver;
+                border-color: $peteriver;
+                transition: 0.3s;
+            }
+
+            &:checked + label {
+                color: $white;
+                background-color: rgba($peteriver, 1);
+                transition: 0.3s;
+            }
+
+
+        }
+    }
+}
+
+.footer {
     position: absolute;
     bottom: 0;
-    background-color: $gray;
+    color: rgba($midnblue, 0.9);
     width: 100%;
-    max-width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 15px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: rgba($midnblue, 0.9);
+
+        &:hover {
+            color: rgba($midnblue, 0.7);
+        }
+    }
 }

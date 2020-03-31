@@ -13,6 +13,7 @@ const sintomas = {
     tosseSangue:   [0, 0.1, 0.2, 0.3],
     olhosInchados: [0, 0.1, 0.2, 0.3],
 }
+
 function calcular(){
     let pontuacao = 0;
     let febre  = 0;
@@ -25,6 +26,7 @@ function calcular(){
     }
     return {pontuacao, febre, faltaAr};
 }
+
 function resultado(){
     let result = calcular();
     if(result.pontuacao >= 70 || (result.febre == 1 && result.faltaAr == 1)){

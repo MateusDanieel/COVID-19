@@ -3,252 +3,274 @@
 <head>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta charset='utf-8' />
-    <title>TRIAGEM ONLINE | COVID-19</title>
+    <title>AUTO-AVALIAÇÃO ONLINE | COVID-19</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/main.min.css' />
+    <script src="https://kit.fontawesome.com/2d82556a54.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <main class="container">
+
+        <form method="POST" action="" class="form">
+
+            <h1>Auto-avaliação Online - Coronavirus (COVID-19)</h1>
+
+            <p>Informe a intensidade dos sintomas no formulário abaixo para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavirus (COVID-19).</p>
+
+            <p>Vale ressaltar que <b>NÃO</b> se trata de um diagnóstico médico, e sim de uma espécie de "triagem" feita com base nas informações levantadas e disponibilizadas até o momento pela OMS (Organização Mundial da Saúde) com o objetivo de tentar ajudar de alguma forma a desafogar, nem que seja só um pouco, o sistema de saúde e informar a população. Portanto, o resultado informado não terá qualquer validade científica/médica.</p>
+
+            <label class="label">
+                <i class="fas fa-temperature-high fa-2x"></i> Febre
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="febreNull" name="febre" value="1" checked />
+                <label for="febreNull">Não Há</label>
+        
+                <input type="radio" id="febreLeve" name="febre" value="2" />
+                <label for="febreLeve">Leve</label>
+        
+                <input type="radio" id="febreMod" name="febre" value="3" />
+                <label for="febreMod">Moderada</label>
+        
+                <input type="radio" id="febreSev" name="febre" value="4" />
+                <label for="febreSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough-slash fa-2x"></i> Tosse seca
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseSecaNull" name="tosseSeca" value="1" checked />
+                <label for="tosseSecaNull">Não Há</label>
+        
+                <input type="radio" id="tosseSecaLeve" name="tosseSeca" value="2" />
+                <label for="tosseSecaLeve">Leve</label>
+        
+                <input type="radio" id="tosseSecaMod" name="tosseSeca" value="3" />
+                <label for="tosseSecaMod">Moderada</label>
+        
+                <input type="radio" id="tosseSecaSev" name="tosseSeca" value="4" />
+                <label for="tosseSecaSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-bed fa-2x"></i> Fadiga
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="fadigaNull" name="fadiga" value="1" checked />
+                <label for="fadigaNull">Não Há</label>
+        
+                <input type="radio" id="fadigaLeve" name="fadiga" value="2" />
+                <label for="fadigaLeve">Leve</label>
+        
+                <input type="radio" id="fadigaMod" name="fadiga" value="3" />
+                <label for="fadigaMod">Moderada</label>
+        
+                <input type="radio" id="fadigaSev" name="fadiga" value="4" />
+                <label for="fadigaSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough fa-2x"></i> Tosse com catarro espesso
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseEspNull" name="tosseEsp" value="1" checked />
+                <label for="tosseEspNull">Não Há</label>
+        
+                <input type="radio" id="tosseEspLeve" name="tosseEsp" value="2" />
+                <label for="tosseEspLeve">Leve</label>
+        
+                <input type="radio" id="tosseEspMod" name="tosseEsp" value="3" />
+                <label for="tosseEspMod">Moderada</label>
+        
+                <input type="radio" id="tosseEspSev" name="tosseEsp" value="4" />
+                <label for="tosseEspSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-lungs fa-2x"></i> Falta de ar
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="faltaArNull" name="faltaAr" value="1" checked />
+                <label for="faltaArNull">Não Há</label>
+        
+                <input type="radio" id="faltaArLeve" name="faltaAr" value="2" />
+                <label for="faltaArLeve">Leve</label>
+        
+                <input type="radio" id="faltaArMod" name="faltaAr" value="3" />
+                <label for="faltaArMod">Moderada</label>
+        
+                <input type="radio" id="faltaArSev" name="faltaAr" value="4" />
+                <label for="faltaArSev">Severa</label>
+            </div>
+            
+            <label class="label">
+                <i class="fas fa-dizzy fa-2x"></i> Dor articular
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="dorArtNull" name="dorArt" value="1" checked />
+                <label for="dorArtNull">Não Há</label>
+        
+                <input type="radio" id="dorArtLeve" name="dorArt" value="2" />
+                <label for="dorArtLeve">Leve</label>
+        
+                <input type="radio" id="dorArtMod" name="dorArt" value="3" />
+                <label for="dorArtMod">Moderada</label>
+        
+                <input type="radio" id="dorArtSev" name="dorArt" value="4" />
+                <label for="dorArtSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-virus fa-2x"></i> Dor de cabeça
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="dorCabNull" name="dorCab" value="1" checked />
+                <label for="dorCabNull">Não Há</label>
+        
+                <input type="radio" id="dorCabLeve" name="dorCab" value="2" />
+                <label for="dorCabLeve">Leve</label>
+        
+                <input type="radio" id="dorCabMod" name="dorCab" value="3" />
+                <label for="dorCabMod">Moderada</label>
+        
+                <input type="radio" id="dorCabSev" name="dorCab" value="4" />
+                <label for="dorCabSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-wind fa-2x"></i> Arrepios
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="arrepiosNull" name="arrepios" value="1" checked />
+                <label for="arrepiosNull">Não Há</label>
+        
+                <input type="radio" id="arrepiosLeve" name="arrepios" value="2" />
+                <label for="arrepiosLeve">Leve</label>
+        
+                <input type="radio" id="arrepiosMod" name="arrepios" value="3" />
+                <label for="arrepiosMod">Moderada</label>
+        
+                <input type="radio" id="arrepiosSev" name="arrepios" value="4" />
+                <label for="arrepiosSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-toilet fa-2x"></i> Náusea ou vômito
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="nausVomNull" name="nausVom" value="1" checked />
+                <label for="nausVomNull">Não Há</label>
+        
+                <input type="radio" id="nausVomLeve" name="nausVom" value="2" />
+                <label for="nausVomLeve">Leve</label>
+        
+                <input type="radio" id="nausVomMod" name="nausVom" value="3" />
+                <label for="nausVomMod">Moderada</label>
+        
+                <input type="radio" id="nausVomSev" name="nausVom" value="4" />
+                <label for="nausVomSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-box-tissue fa-2x"></i> Nariz entupido
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="narEntNull" name="narEnt" value="1" checked />
+                <label for="narEntNull">Não Há</label>
+        
+                <input type="radio" id="narEntLeve" name="narEnt" value="2" />
+                <label for="narEntLeve">Leve</label>
+        
+                <input type="radio" id="narEntMod" name="narEnt" value="3" />
+                <label for="narEntMod">Moderada</label>
+        
+                <input type="radio" id="narEntSev" name="narEnt" value="4" />
+                <label for="narEntSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-toilet-paper fa-2x"></i> Diarreia
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="diarrNull" name="diarr" value="1" checked />
+                <label for="diarrNull">Não Há</label>
+        
+                <input type="radio" id="diarrLeve" name="diarr" value="2" />
+                <label for="diarrLeve">Leve</label>
+        
+                <input type="radio" id="diarrMod" name="diarr" value="3" />
+                <label for="diarrMod">Moderada</label>
+        
+                <input type="radio" id="diarrSev" name="diarr" value="4" />
+                <label for="diarrSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough fa-2x"></i> Tosse com sangue
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseSangueNull" name="tosseSangue" value="1" checked />
+                <label for="tosseSangueNull">Não Há</label>
+        
+                <input type="radio" id="tosseSangueLeve" name="tosseSangue" value="2" />
+                <label for="tosseSangueLeve">Leve</label>
+        
+                <input type="radio" id="tosseSangueMod" name="tosseSangue" value="3" />
+                <label for="tosseSangueMod">Moderada</label>
+        
+                <input type="radio" id="tosseSangueSev" name="tosseSangue" value="4" />
+                <label for="tosseSangueSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-low-vision fa-2x"></i> Olhos inchados
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="olhosInchNull" name="olhosInch" value="1" checked />
+                <label for="olhosInchNull">Não Há</label>
+        
+                <input type="radio" id="olhosInchLeve" name="olhosInch" value="2" />
+                <label for="olhosInchLeve">Leve</label>
+        
+                <input type="radio" id="olhosInchMod" name="olhosInch" value="3" />
+                <label for="olhosInchMod">Moderada</label>
+        
+                <input type="radio" id="olhosInchSev" name="olhosInch" value="4" />
+                <label for="olhosInchSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-fighter-jet fa-2x"></i> Esteve em contato com algum infectado ou viajou para o exterior recentemente?
+            </label>
+            
+            <div class="radio-alt half">
+                <input type="radio" id="contViagNull" name="contViag" value="1" checked />
+                <label for="contViagNull">Sim</label>
+        
+                <input type="radio" id="contViagLeve" name="contViag" value="2" />
+                <label for="contViagLeve">Não</label>
+            </div>
+
+        </form>
+
+    </main>
     
-    <form method="POST" action="">
-        <label>Febre</label><br>
-
-        <input type="radio" id="febreNull" name="febre" value="1" />
-        <label for="febreNull">Não Há</label>
-
-        <input type="radio" id="febreLeve" name="febre" value="2" />
-        <label for="febreLeve">Leve</label>
-
-        <input type="radio" id="febreMod" name="febre" value="3" />
-        <label for="febreMod">Moderada</label>
-
-        <input type="radio" id="febreSev" name="febre" value="4" />
-        <label for="febreSev">Severa</label>
-
-
-
-
-
-        <label>Tosse seca</label><br>
-
-        <input type="radio" id="tosseSecaNull" name="tosseSeca" value="1" />
-        <label for="tosseSecaNull">Não Há</label>
-
-        <input type="radio" id="tosseSecaLeve" name="tosseSeca" value="2" />
-        <label for="tosseSecaLeve">Leve</label>
-
-        <input type="radio" id="tosseSecaMod" name="tosseSeca" value="3" />
-        <label for="tosseSecaMod">Moderada</label>
-
-        <input type="radio" id="tosseSecaSev" name="tosseSeca" value="4" />
-        <label for="tosseSecaSev">Severa</label>
-
-
-
-
-        <label>Fadiga</label><br>
-
-        <input type="radio" id="fadigaNull" name="fadiga" value="1" />
-        <label for="fadigaNull">Não Há</label>
-
-        <input type="radio" id="fadigaLeve" name="fadiga" value="2" />
-        <label for="fadigaLeve">Leve</label>
-
-        <input type="radio" id="fadigaMod" name="fadiga" value="3" />
-        <label for="fadigaMod">Moderada</label>
-
-        <input type="radio" id="fadigaSev" name="fadiga" value="4" />
-        <label for="fadigaSev">Severa</label>
-
-
-
-
-
-
-        <label>Tosse com catarro espesso</label><br>
-
-        <input type="radio" id="tosseEspNull" name="tosseEsp" value="1" />
-        <label for="tosseEspNull">Não Há</label>
-
-        <input type="radio" id="tosseEspLeve" name="tosseEsp" value="2" />
-        <label for="tosseEspLeve">Leve</label>
-
-        <input type="radio" id="tosseEspMod" name="tosseEsp" value="3" />
-        <label for="tosseEspMod">Moderada</label>
-
-        <input type="radio" id="tosseEspSev" name="tosseEsp" value="4" />
-        <label for="tosseEspSev">Severa</label>
-
-
-
-
-        <label>Falta de ar</label><br>
-
-        <input type="radio" id="faltaArNull" name="faltaAr" value="1" />
-        <label for="faltaArNull">Não Há</label>
-
-        <input type="radio" id="faltaArLeve" name="faltaAr" value="2" />
-        <label for="faltaArLeve">Leve</label>
-
-        <input type="radio" id="faltaArMod" name="faltaAr" value="3" />
-        <label for="faltaArMod">Moderada</label>
-
-        <input type="radio" id="faltaArSev" name="faltaAr" value="4" />
-        <label for="faltaArSev">Severa</label>
-
-
-
-
-        <label>Dor articular</label><br>
-
-        <input type="radio" id="dorArtNull" name="dorArt" value="1" />
-        <label for="dorArtNull">Não Há</label>
-
-        <input type="radio" id="dorArtLeve" name="dorArt" value="2" />
-        <label for="dorArtLeve">Leve</label>
-
-        <input type="radio" id="dorArtMod" name="dorArt" value="3" />
-        <label for="dorArtMod">Moderada</label>
-
-        <input type="radio" id="dorArtSev" name="dorArt" value="4" />
-        <label for="dorArtSev">Severa</label>
-
-
-
-
-        <label>Dor de cabeça</label><br>
-
-        <input type="radio" id="dorCabNull" name="dorCab" value="1" />
-        <label for="dorCabNull">Não Há</label>
-
-        <input type="radio" id="dorCabLeve" name="dorCab" value="2" />
-        <label for="dorCabLeve">Leve</label>
-
-        <input type="radio" id="dorCabMod" name="dorCab" value="3" />
-        <label for="dorCabMod">Moderada</label>
-
-        <input type="radio" id="dorCabSev" name="dorCab" value="4" />
-        <label for="dorCabSev">Severa</label>
-
-
-
-
-        <label>Arrepios</label><br>
-
-        <input type="radio" id="arrepiosNull" name="arrepios" value="1" />
-        <label for="arrepiosNull">Não Há</label>
-
-        <input type="radio" id="arrepiosLeve" name="arrepios" value="2" />
-        <label for="arrepiosLeve">Leve</label>
-
-        <input type="radio" id="arrepiosMod" name="arrepios" value="3" />
-        <label for="arrepiosMod">Moderada</label>
-
-        <input type="radio" id="arrepiosSev" name="arrepios" value="4" />
-        <label for="arrepiosSev">Severa</label>
-
-
-
-
-
-        
-        <label>Náusea ou vômito</label><br>
-
-        <input type="radio" id="nausVomNull" name="nausVom" value="1" />
-        <label for="nausVomNull">Não Há</label>
-
-        <input type="radio" id="nausVomLeve" name="nausVom" value="2" />
-        <label for="nausVomLeve">Leve</label>
-
-        <input type="radio" id="nausVomMod" name="nausVom" value="3" />
-        <label for="nausVomMod">Moderada</label>
-
-        <input type="radio" id="nausVomSev" name="nausVom" value="4" />
-        <label for="nausVomSev">Severa</label>
-
-
-
-
-
-        <label>Nariz entupido</label><br>
-
-        <input type="radio" id="narEntNull" name="narEnt" value="1" />
-        <label for="narEntNull">Não Há</label>
-
-        <input type="radio" id="narEntLeve" name="narEnt" value="2" />
-        <label for="narEntLeve">Leve</label>
-
-        <input type="radio" id="narEntMod" name="narEnt" value="3" />
-        <label for="narEntMod">Moderada</label>
-
-        <input type="radio" id="narEntSev" name="narEnt" value="4" />
-        <label for="narEntSev">Severa</label>
-
-
-
-
-        <label>Diarreia</label><br>
-
-        <input type="radio" id="diarrNull" name="diarr" value="1" />
-        <label for="diarrNull">Não Há</label>
-
-        <input type="radio" id="diarrLeve" name="diarr" value="2" />
-        <label for="diarrLeve">Leve</label>
-
-        <input type="radio" id="diarrMod" name="diarr" value="3" />
-        <label for="diarrMod">Moderada</label>
-
-        <input type="radio" id="diarrSev" name="diarr" value="4" />
-        <label for="diarrSev">Severa</label>
-
-
-
-        <label>Tosse com sangue</label><br>
-
-        <input type="radio" id="tosseSangueNull" name="tosseSangue" value="1" />
-        <label for="tosseSangueNull">Não Há</label>
-
-        <input type="radio" id="tosseSangueLeve" name="tosseSangue" value="2" />
-        <label for="tosseSangueLeve">Leve</label>
-
-        <input type="radio" id="tosseSangueMod" name="tosseSangue" value="3" />
-        <label for="tosseSangueMod">Moderada</label>
-
-        <input type="radio" id="tosseSangueSev" name="tosseSangue" value="4" />
-        <label for="tosseSangueSev">Severa</label>
-
-
-
-
-        
-        <label>Olhos inchados</label><br>
-
-        <input type="radio" id="olhosInchNull" name="olhosInch" value="1" />
-        <label for="olhosInchNull">Não Há</label>
-
-        <input type="radio" id="olhosInchLeve" name="olhosInch" value="2" />
-        <label for="olhosInchLeve">Leve</label>
-
-        <input type="radio" id="olhosInchMod" name="olhosInch" value="3" />
-        <label for="olhosInchMod">Moderada</label>
-
-        <input type="radio" id="olhosInchSev" name="olhosInch" value="4" />
-        <label for="olhosInchSev">Severa</label>
-
-
-
-
-        
-        <label>Esteve em contato com alguém contaminado e/ou viajou para o exterior recentemente?</label><br>
-
-        <input type="radio" id="contViagNull" name="contViag" value="1" />
-        <label for="contViagNull">Sim</label>
-
-        <input type="radio" id="contViagLeve" name="contViag" value="2" />
-        <label for="contViagLeve">Não</label>
-
-    </form>
-
-    <footer>
+    <footer class="footer">
         Copyright &copy; 2020 | Desenvolvido por <a href="#" target="_blank">Mateus Daniel</a> e <a href="#" target="_blank">José Felipe</a>.
     </footer>
 
