@@ -6,6 +6,8 @@ $peteriver: #3498db;
 $midnblue: #2c3e50;
 $silver: #bdc3c7;
 $clouds: #ecf0f1;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
 
 @custom-media --xs (max-width: 576px);
 @custom-media --sm (max-width: 768px);
@@ -20,13 +22,13 @@ $clouds: #ecf0f1;
 html {
     position: relative;
     min-height: 100%;
-    padding-bottom: 30px;   
+    padding-bottom: 40px;   
 }
 
 body {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     overflow-x: hidden;
     background-color: #F0F0F0;
 
@@ -42,6 +44,7 @@ body {
     }
 }
 
+/*
 nav {
     width: 100%;
     padding: 20px;
@@ -59,6 +62,7 @@ nav {
         }
     }
 }
+*/
 
 .container {
     width: 100%;
@@ -74,6 +78,11 @@ nav {
     display: flex;
     flex-direction: column;
 
+    @media(--sm) {
+        margin: 20px;
+        padding: 20px;
+    }
+
     h1 {
         text-transform: uppercase;
         font-weight: 800;
@@ -83,6 +92,10 @@ nav {
 
     p {
         color: $concrete;
+
+        @media(--sm) {
+            text-align: center;
+        }
 
         b {
             font-weight: 700;
@@ -97,9 +110,14 @@ nav {
         color: $midnblue;
         font-weight: 600;
 
+        @media(--sm) {
+            padding: 10px 0 20px;           
+        }
+
         i {
             color: rgba($midnblue, 0.2);
-            width: 50px;
+            width: 40px;
+            margin-right: 10px;
         }
     }
 
@@ -108,16 +126,6 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
-        &.half {
-            width: 50%;
-
-            input {
-                & + label {
-                    width: 45%;
-                }
-            }
-        }
 
         input {
             display: none;
@@ -135,6 +143,11 @@ nav {
                 border-radius: 4px;
                 border: 2px solid transparent;
                 transition: 0.3s;
+
+                @media(--sm) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
             }
 
             &:hover + label {
@@ -151,29 +164,68 @@ nav {
 
 
         }
+
+        .hidden {
+            visibility: hidden;
+
+            @media (--sm) {
+                display: none;
+            }
+        }
+    }
+
+    button {
+        background-color: rgba($emerald, 1);
+        width: 23.5%;
+        padding: 15px;
+        margin: 20px 0 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $white;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        transition: 0.3s;
+
+        @media(--sm) {
+            width: 100%;
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: $nephritis;
+            transition: 0.3s;
+        }
     }
 }
 
 .footer {
     position: absolute;
     bottom: 0;
-    color: rgba($midnblue, 0.9);
     width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 400;
+    height: 40px;
 
-    a {
-        text-decoration: none;
-        font-weight: 700;
+    p {
         color: rgba($midnblue, 0.9);
-        transition: 0.3s;
+        text-align: center;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 400;
 
-        &:hover {
-            color: rgba($midnblue, 0.7);
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            color: rgba($midnblue, 0.9);
             transition: 0.3s;
+    
+            &:hover {
+                color: rgba($midnblue, 0.7);
+                transition: 0.3s;
+            }
         }
     }
+
+    
 }

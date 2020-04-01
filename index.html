@@ -9,13 +9,13 @@
     <script src="https://kit.fontawesome.com/2d82556a54.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <!--
     <nav class="container">
         <a href="https://github.com/MateusDanieel/COVID-19" target="_blank">
             <i class="fab fa-github fa-2x"></i>
         </a>
     </nav>
-
+    -->
     <main class="container">
 
         <form method="POST" action="" class="form">
@@ -264,20 +264,30 @@
                 <i class="fas fa-fighter-jet fa-2x"></i> Esteve em contato com algum infectado ou viajou para o exterior recentemente?
             </label>
             
-            <div class="radio-alt half">
+            <div class="radio-alt">
                 <input type="radio" id="contViagNull" name="contViag" value="1" checked  />
                 <label for="contViagNull">Sim</label>
         
                 <input type="radio" id="contViagLeve" name="contViag" value="2" />
                 <label for="contViagLeve">Não</label>
+
+                <input type="radio" id="contViagLeve" name="contViag" value="2"/>
+                <label for="contViagLeve" class="hidden">Não</label>
+
+                <input type="radio" id="contViagLeve" name="contViag" value="2" />
+                <label for="contViagLeve" class="hidden">Não</label>
             </div>
+
+            <button type="submit">
+                Calcular
+            </button>
 
         </form>
 
     </main>
     
     <footer class="footer">
-        Copyright &copy; 2020 | Desenvolvido por <a href="#" target="_blank">Mateus Daniel</a> e <a href="#" target="_blank">José Felipe</a>.
+        <p>Copyright &copy; 2020 - <a href="https://mateusdanieel.github.io/" target="_blank">Mateus Daniel</a> & <a href="https://www.linkedin.com/in/jos%C3%A9-felipe-silva-santos-209084194/" target="_blank">José Felipe</a></p>
     </footer>
 
     <script type='text/javascript' src='dist/assets/js/main.min.js'></script>
