@@ -5,5 +5,5 @@ Este software tem como finalidade principal realizar uma auto-avaliação de pos
 ABRINDO NO DESKTOP:
 
 1 - Instale o 'Yarn';<br>
-2 - Abra o 'Terminal' (ou CMD, Git Bash, etc.) e execute o comando 'yarn install' e aguarde;
+2 - Abra o 'Terminal' (ou CMD, Git Bash, etc.) e execute o comando 'yarn install' e aguarde;<br>
 3 - Execute o 'Gulp' através do comando 'yarn run gulp' e aguarde;
