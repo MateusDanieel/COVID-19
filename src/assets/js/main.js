@@ -13,6 +13,7 @@ const sintomas = {
     diarreia:      [0, 0.7, 0.9, 1.3],
     tosseSangue:   [0, 0.1, 0.2, 0.3],
     olhosInchados: [0, 0.1, 0.2, 0.3],
+    contViag:[0,20]
 }
 //<<<<<<< HEAD
 
@@ -23,12 +24,21 @@ function calcular(){
     let pontuacao = 0;
     let febre  = 0;
     let faltaAr = 0;
-
+    
+    
+    
     for(let prop in sintomas){
-        let indice = document.querySelector(`${prop}`).value;
+        var radios = document.getElementsByName(`${prop}`);
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                var indice = radios[i].value-1;
+                break;
+            }           
+        }
         (prop == 'febre' && sintomas[prop][indice] >= 1) ? febre = 1 : false;
         (prop == 'faltaAr' && sintomas[prop][indice] >= 1) ? faltaAr = 1 : false;
         (prop == 'febre' || prop == 'faltaAr') ? pontuacao += sintomas[prop][indice]*1.5 : pontuacao += sintomas[prop][indice];
+ 
     }
 
     return {pontuacao, febre, faltaAr};
@@ -52,9 +62,15 @@ function resultado(){
 //retorna um objeto com os sintomas do usuario EX {febre:1, faltaAr:0}
 function sintomasUser(){
     let sintomasPresentes = {};
+    
     for(prop in sintomas){
-        let indice = document.getElementsByName(`#${prop}`).value;
-        (sintomas[prop][indice] >= 1) ? sintomasPresentes[prop] = 1 : sintomasPresentes[prop] = 0;
+        var radios = document.getElementsByName(`${prop}`);
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                var indice = radios[i].value-1;
+                (sintomas[prop][indice] >= 1) ? sintomasPresentes[prop] = 1 : sintomasPresentes[prop] = 0;
+            }
+        }
     }
     return sintomasPresentes;
 }
