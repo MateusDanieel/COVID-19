@@ -23,12 +23,14 @@ function calcular(){
     let pontuacao = 0;
     let febre  = 0;
     let faltaAr = 0;
-    for(prop in sintomas){
-        let indice = document.querySelector(`#${prop}`).value;
+
+    for(let prop in sintomas){
+        let indice = document.querySelector(`${prop}`).value;
         (prop == 'febre' && sintomas[prop][indice] >= 1) ? febre = 1 : false;
         (prop == 'faltaAr' && sintomas[prop][indice] >= 1) ? faltaAr = 1 : false;
         (prop == 'febre' || prop == 'faltaAr') ? pontuacao += sintomas[prop][indice]*1.5 : pontuacao += sintomas[prop][indice];
     }
+
     return {pontuacao, febre, faltaAr};
 }
 //<<<<<<< HEAD
@@ -38,19 +40,20 @@ function calcular(){
 //>>>>>>> c4a475aa05a428e1470ce32dddcf86750fdd9713
 function resultado(){
     let result = calcular();
+
     if(result.pontuacao >= 70 || (result.febre == 1 && result.faltaAr == 1)){
-        document.querySelector().innerHTML('Alta');
+        document.querySelector('.result').innerHTML = 'Alta';
     }else if(result.pontuacao >= 35){
-        document.querySelector().innerHTML('Moderada');
+        document.querySelector('.result').innerHTML = 'Moderada';
     }else{
-        document.querySelector().innerHTML('Baixa');
+        document.querySelector('.result').innerHTML = 'Baixa';
     }
 }
 //retorna um objeto com os sintomas do usuario EX {febre:1, faltaAr:0}
 function sintomasUser(){
     let sintomasPresentes = {};
     for(prop in sintomas){
-        let indice = document.querySelector(`#${prop}`).value;
+        let indice = document.getElementsByName(`#${prop}`).value;
         (sintomas[prop][indice] >= 1) ? sintomasPresentes[prop] = 1 : sintomasPresentes[prop] = 0;
     }
     return sintomasPresentes;
