@@ -9,21 +9,19 @@ const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
+const customedia = require('postcss-custom-media');
 const autoprefixer = require('autoprefixer');
 
 function sync() {
     browsersync.init({
         server: {
-            baseDir: './dist',
-            index: './index.html'
+            index: 'index.html'
         }
     });
 }
 
 function html() {
-    return src('src/*.html')
-
-    .pipe(dest('dist/'))
+    return src('*.html')
 
     .pipe(browsersync.stream())
 }
@@ -34,7 +32,8 @@ function css() {
     .pipe(cssimport())
 
     .pipe(postcss([
-        autoprefixer()
+        autoprefixer(),
+        customedia()
     ]))
 
     .pipe(sass({
@@ -81,7 +80,7 @@ function att() {
 
     watch(['./src/assets/js/*.js'], js);
 
-    watch(['./src/**/*.html'], html);
+    watch(['./index.html'], html);
 }
 
 exports.default = series(
