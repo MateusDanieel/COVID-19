@@ -8,6 +8,10 @@ $silver: #bdc3c7;
 $clouds: #ecf0f1;
 $emerald: #2ecc71;
 $nephritis: #27ae60;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$sunflower: #f1c40f;
+$orange: #f39c12;
 
 @custom-media --xs (max-width: 576px);
 @custom-media --sm (max-width: 768px);
@@ -70,136 +74,6 @@ nav {
     margin: 0 auto;
 }
 
-.form {
-    background-color: #FFF;
-    padding: 20px 40px;
-    margin: 40px 80px 0;
-    box-shadow: 0 0 3px rgba($midnblue, .1);
-    display: flex;
-    flex-direction: column;
-
-    @media(--sm) {
-        margin: 20px 20px 0;
-        padding: 20px;
-    }
-
-    h1 {
-        text-transform: uppercase;
-        font-weight: 800;
-        color: $midnblue;
-        text-align: center;
-    }
-
-    p {
-        color: $concrete;
-
-        @media(--sm) {
-            text-align: center;
-        }
-
-        b {
-            font-weight: 700;
-        }
-    }
-
-    .label {
-        display: flex;
-        align-items: center;
-        padding: 20px 0;
-        text-transform: uppercase;
-        color: $midnblue;
-        font-weight: 600;
-
-        @media(--sm) {
-            padding: 10px 0 20px;           
-        }
-
-        i {
-            color: rgba($midnblue, 0.2);
-            width: 40px;
-            margin-right: 10px;
-        }
-    }
-
-    .radio-alt {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        input {
-            display: none;
-
-            & + label {
-                background-color: rgba($concrete, 0.2);
-                padding: 15px 0;
-                width: 23.5%;
-                font-size: 16px;
-                font-weight: 600;
-                color: $midnblue;
-                cursor: pointer;
-                text-align: center;
-                text-transform: uppercase;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                transition: 0.3s;
-
-                @media(--sm) {
-                    width: 100%;
-                    margin-bottom: 10px;
-                }
-            }
-
-            &:hover + label {
-                color: $peteriver;
-                border-color: $peteriver;
-                transition: 0.3s;
-            }
-
-            &:checked + label {
-                color: $white;
-                background-color: rgba($peteriver, 1);
-                transition: 0.3s;
-            }
-
-
-        }
-
-        .hidden {
-            visibility: hidden;
-
-            @media (--sm) {
-                display: none;
-            }
-        }
-    }
-
-    button {
-        background-color: rgba($emerald, 1);
-        padding: 15px;
-        margin: 20px 0 0;
-        font-size: 16px;
-        font-weight: 600;
-        color: $white;
-        cursor: pointer;
-        text-align: center;
-        text-transform: uppercase;
-        border-radius: 4px;
-        border: 2px solid transparent;
-        outline: none;
-        transition: 0.3s;
-
-        @media(--sm) {
-            margin: 0;
-        }
-
-        &:hover {
-            background-color: $nephritis;
-            transition: 0.3s;
-        }
-    }
-}
-
 .footer {
     position: absolute;
     bottom: 0;
@@ -228,5 +102,4 @@ nav {
         }
     }
 
-    
 }

@@ -15,17 +15,12 @@ const sintomas = {
     olhosInchados: [0, 0.1, 0.2, 0.3],
     contViag:[0,20]
 }
-//<<<<<<< HEAD
 
-//=======
 //calcula a pontuação que o usuario teve de acordo com os sintomas
-//>>>>>>> c4a475aa05a428e1470ce32dddcf86750fdd9713
 function calcular(){
     let pontuacao = 0;
     let febre  = 0;
     let faltaAr = 0;
-    
-    
     
     for(let prop in sintomas){
         var radios = document.getElementsByName(`${prop}`);
@@ -43,20 +38,17 @@ function calcular(){
 
     return {pontuacao, febre, faltaAr};
 }
-//<<<<<<< HEAD
 
-//=======
 //retorna a probabilidade de estar infectado (Alta, moderada baixa) no html
-//>>>>>>> c4a475aa05a428e1470ce32dddcf86750fdd9713
 function resultado(){
     let result = calcular();
 
     if(result.pontuacao >= 70 || (result.febre == 1 && result.faltaAr == 1)){
-        document.querySelector('.result').innerHTML = 'Alta';
-    }else if(result.pontuacao >= 35){
-        document.querySelector('.result').innerHTML = 'Moderada';
-    }else{
-        document.querySelector('.result').innerHTML = 'Baixa';
+        document.querySelector('.box-res').innerHTML = "<div class='danger'><h1>Probabilidade: Alta</h1><p>De acordo com as suas respostas, é possível que você se enquadre como caso suspeito de COVID-19. É importante ressaltar que isso <b>NÃO</b> se trata de um diagnóstico.</p><p>Recomendamos que você siga as orientações dos órgãos de saúde e procure atendimento médico em uma unidade de saúde próxima da sua residência o mais rápido possível.</p></div>";
+    } else if(result.pontuacao >= 35){
+        document.querySelector('.box-res').innerHTML = "<div class='warning'><h1>Probabilidade: Moderada</h1><p>De acordo com as suas respostas, você tem chances moderadas de se enquadrar como caso suspeito de COVID-19. É importante ressaltar que isso <b>NÃO</b> se trata de um diagnóstico.</p><p>Recomendamos que você siga as orientações dos órgãos de saúde e procure atendimento médico em uma unidade de saúde próxima da sua residência caso os sintomas fiquem mais severos.</p></div>";
+    } else{
+        document.querySelector('.box-res').innerHTML = '<div class="success"><h1>Probabilidade: Baixa</h1><p>De acordo com as suas respostas, você tem chances baixas de se enquadrar como caso suspeito de COVID-19. É importante ressaltar que isso <b>NÃO</b> se trata de um diagnóstico.</p><p>Recomendamos que você siga as orientações dos órgãos de saúde e procure atendimento médico somente caso os sintomas fiquem mais severos.</p></div>';
     }
 }
 //retorna um objeto com os sintomas do usuario EX {febre:1, faltaAr:0}
