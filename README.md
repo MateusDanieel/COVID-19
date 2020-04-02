@@ -14,8 +14,8 @@ ABRINDO NO DESKTOP:
 
 CRÉDITOS:
 
-MATEUS DANIEL (FRONT-END)
+MATEUS DANIEL (FRONT-END)<br>
 https://mateusdanieel.github.io/
 
-JOSÉ FELIPE (BACK-END)
+JOSÉ FELIPE (BACK-END)<br>
 https://www.linkedin.com/in/jos%C3%A9-felipe-silva-santos-209084194/
