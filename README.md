@@ -4,7 +4,7 @@ Este software tem como finalidade principal realizar uma auto-avaliação de pos
 
 Tecnologias: HTML5, CSS3, Sass, Yarn, Gulp.js e JavaScript Vanilla.
 
-O aplicativo é executado online, o que torna o mesmo multiplataforma, tendo como o seu principal ponto positivo o design responsivo que permite rodar perfeitamente tanto em computadores desktop quanto em dispositivos mobile.
+O sistema foi hospedado na nuvem, o que o torna multiplataforma, tendo como o seu principal ponto positivo o design responsivo que permite rodar perfeitamente tanto em computadores desktop quanto em dispositivos mobile.
 
 ABRINDO NO DESKTOP:
 
