@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta charset='utf-8' />
-    <title>AUTO-AVALIAÇÃO ONLINE | CORONAVIRUS (COVID-19)</title>
+    <title>AUTO-AVALIAÇÃO/TRIAGEM ONLINE | CORONAVÍRUS (COVID-19)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel='stylesheet' type='text/css' media='screen' href='dist/assets/css/main.min.css' />
     <script src="https://kit.fontawesome.com/2d82556a54.js" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
 
         <form method="POST" action="" class="form">
 
-            <h1>Auto-avaliação Coronavirus (COVID-19)</h1>
+            <h1>AUTO-AVALIAÇÃO CORONAVÍRUS (COVID-19)</h1>
 
-            <p>Informe a intensidade dos sintomas no formulário abaixo para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavirus (COVID-19).</p>
+            <p>Informe a intensidade dos sintomas no formulário abaixo para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavírus (COVID-19).</p>
 
             <p>Vale ressaltar que <b>NÃO</b> se trata de um diagnóstico médico, e sim de uma espécie de "triagem" feita com base nas informações levantadas e disponibilizadas até o momento pela OMS (Organização Mundial da Saúde) com o objetivo de tentar ajudar de alguma forma a desafogar, nem que seja só um pouco, o sistema de saúde e informar a população. Portanto, o resultado informado não terá qualquer validade científica/médica.</p>
 
@@ -271,16 +271,22 @@
                 <input type="radio" id="contViagSim" name="contViag" value="2" />
                 <label for="contViagSim">Sim</label>
 
-                <input type="radio" id="contViagLeve" />
-                <label for="contViagLeve" class="hidden"></label>
+                <input type="radio" />
+                <label class="hidden"></label>
 
-                <input type="radio" id="contViagLeve" />
-                <label for="contViagLeve" class="hidden"></label>
+                <input type="radio" />
+                <label class="hidden"></label>
             </div>
 
-            <button type="button" onclick="resultado()">
-                Calcular
-            </button>
+            <div class="btn-group">
+                <button type="button" onclick="resultado()" class="btn-success">
+                    Calcular
+                </button>
+
+                <button type="button" onclick="location.href = 'index.html'" class="btn-secondary" >
+                    Limpar/Refazer
+                </button>
+            </div>
 
             <div class="box-res"></div>
 
