@@ -49,26 +49,6 @@ body {
     }
 }
 
-/*
-nav {
-    width: 100%;
-    padding: 20px;
-    position: relative;
-
-    a {
-        position: absolute;
-        right: 0;
-        color: rgba($white, 0.7);
-        transition: 0.3s;
-
-        &:hover {
-            color: rgba($white, 1);
-            transition: 0.3s;
-        }
-    }
-}
-*/
-
 .container {
     width: 100%;
     max-width: 1140px;
@@ -102,5 +82,4 @@ nav {
             }
         }
     }
-
 }

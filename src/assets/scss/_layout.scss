@@ -169,6 +169,10 @@
             margin-top: 10px;
             border-radius: 4px;
 
+            @media(--sm) {
+                padding: 20px 20px 4px;
+            }
+
             h1 {
                 margin: 0;
                 color: rgba(0, 0, 0, 0.7);

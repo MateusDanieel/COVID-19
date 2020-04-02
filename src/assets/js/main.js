@@ -51,6 +51,7 @@ function resultado(){
         document.querySelector('.box-res').innerHTML = '<div class="success"><h1>Risco: Baixo</h1><p>De acordo com as suas respostas, você tem chances baixas de se enquadrar como caso suspeito de COVID-19. É importante ressaltar que isso <b>NÃO</b> se trata de um diagnóstico.</p><p>Recomendamos que você siga as orientações dos órgãos de saúde e procure atendimento médico somente caso os sintomas fiquem mais severos.</p></div>';
     }
 }
+
 //retorna um objeto com os sintomas do usuario EX {febre:1, faltaAr:0}
 function sintomasUser(){
     let sintomasPresentes = {};
