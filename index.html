@@ -1,0 +1,373 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>TESTE ONLINE | CORONAVÍRUS (COVID-19)</title>
+    <meta name="description" content="Informe a intensidade dos sintomas para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavírus (COVID-19).">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="COVID-19, coronavirus, teste online covid, teste online coronavirus, teste covid, teste coronavirus, pandemia, covid">
+    <meta property="og:title" content="TESTE ONLINE | CORONAVÍRUS (COVID-19)">
+    <meta property="og:description" content="Informe a intensidade dos sintomas para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavírus (COVID-19).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mateusdanieel.github.io/COVID-19">
+    <meta property="og:image" content="">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <meta name="theme-color" content="#fafafa">
+    <script src="https://kit.fontawesome.com/2d82556a54.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <form method="POST" action="" class="form">
+
+            <h1>TESTE PARA O CORONAVÍRUS (COVID-19)</h1>
+
+            <p>Informe a intensidade dos sintomas no formulário abaixo para o nosso sistema avaliar a probabilidade de você se enquadrar como suspeito de ser portador do novo coronavírus (COVID-19).</p>
+
+            <p>Vale ressaltar que <b>NÃO</b> se trata de um diagnóstico médico, e sim de uma espécie de "triagem" feita com base nas informações levantadas e disponibilizadas até o momento pela OMS (Organização Mundial da Saúde) com o objetivo de tentar ajudar de alguma forma a desafogar, nem que seja só um pouco, o sistema de saúde e informar a população. Portanto, o resultado informado não terá qualquer validade científica/médica.</p>
+
+            <label class="label">
+                <i class="fas fa-temperature-high fa-2x"></i> Febre
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="febreNull" name="febre" value="1" checked  />
+                <label for="febreNull">Não Há</label>
+        
+                <input type="radio" id="febreLeve" name="febre" value="2" />
+                <label for="febreLeve">Leve</label>
+        
+                <input type="radio" id="febreMod" name="febre" value="3" />
+                <label for="febreMod">Moderada</label>
+        
+                <input type="radio" id="febreSev" name="febre" value="4" />
+                <label for="febreSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough-slash fa-2x"></i> Tosse seca
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseSecaNull" name="tosseSeca" value="1" checked  />
+                <label for="tosseSecaNull">Não Há</label>
+        
+                <input type="radio" id="tosseSecaLeve" name="tosseSeca" value="2" />
+                <label for="tosseSecaLeve">Leve</label>
+        
+                <input type="radio" id="tosseSecaMod" name="tosseSeca" value="3" />
+                <label for="tosseSecaMod">Moderada</label>
+        
+                <input type="radio" id="tosseSecaSev" name="tosseSeca" value="4" />
+                <label for="tosseSecaSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-bed fa-2x"></i> Fadiga
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="fadigaNull" name="fadiga" value="1" checked  />
+                <label for="fadigaNull">Não Há</label>
+        
+                <input type="radio" id="fadigaLeve" name="fadiga" value="2" />
+                <label for="fadigaLeve">Leve</label>
+        
+                <input type="radio" id="fadigaMod" name="fadiga" value="3" />
+                <label for="fadigaMod">Moderada</label>
+        
+                <input type="radio" id="fadigaSev" name="fadiga" value="4" />
+                <label for="fadigaSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough fa-2x"></i> Tosse com catarro espesso
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseEspNull" name="tossoCatarro" value="1" checked  />
+                <label for="tosseEspNull">Não Há</label>
+        
+                <input type="radio" id="tosseEspLeve" name="tossoCatarro" value="2" />
+                <label for="tosseEspLeve">Leve</label>
+        
+                <input type="radio" id="tosseEspMod" name="tossoCatarro" value="3" />
+                <label for="tosseEspMod">Moderada</label>
+        
+                <input type="radio" id="tosseEspSev" name="tossoCatarro" value="4" />
+                <label for="tosseEspSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-lungs fa-2x"></i> Falta de ar
+            </label>
+
+            <div class="radio-alt">
+                <input type="radio" id="faltaArNull" name="faltaAr" value="1" checked  />
+                <label for="faltaArNull">Não Há</label>
+        
+                <input type="radio" id="faltaArLeve" name="faltaAr" value="2" />
+                <label for="faltaArLeve">Leve</label>
+        
+                <input type="radio" id="faltaArMod" name="faltaAr" value="3" />
+                <label for="faltaArMod">Moderada</label>
+        
+                <input type="radio" id="faltaArSev" name="faltaAr" value="4" />
+                <label for="faltaArSev">Severa</label>
+            </div>
+            
+            <label class="label">
+                <i class="fas fa-dizzy fa-2x"></i> Dor articular
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="dorArtNull" name="dorArticular" value="1" checked  />
+                <label for="dorArtNull">Não Há</label>
+        
+                <input type="radio" id="dorArtLeve" name="dorArticular" value="2" />
+                <label for="dorArtLeve">Leve</label>
+        
+                <input type="radio" id="dorArtMod" name="dorArticular" value="3" />
+                <label for="dorArtMod">Moderada</label>
+        
+                <input type="radio" id="dorArtSev" name="dorArticular" value="4" />
+                <label for="dorArtSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-virus fa-2x"></i> Dor de cabeça
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="dorCabNull" name="dorCabeca" value="1" checked  />
+                <label for="dorCabNull">Não Há</label>
+        
+                <input type="radio" id="dorCabLeve" name="dorCabeca" value="2" />
+                <label for="dorCabLeve">Leve</label>
+        
+                <input type="radio" id="dorCabMod" name="dorCabeca" value="3" />
+                <label for="dorCabMod">Moderada</label>
+        
+                <input type="radio" id="dorCabSev" name="dorCabeca" value="4" />
+                <label for="dorCabSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-wind fa-2x"></i> Arrepios
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="arrepiosNull" name="arrepio" value="1" checked  />
+                <label for="arrepiosNull">Não Há</label>
+        
+                <input type="radio" id="arrepiosLeve" name="arrepio" value="2" />
+                <label for="arrepiosLeve">Leve</label>
+        
+                <input type="radio" id="arrepiosMod" name="arrepio" value="3" />
+                <label for="arrepiosMod">Moderada</label>
+        
+                <input type="radio" id="arrepiosSev" name="arrepio" value="4" />
+                <label for="arrepiosSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-toilet fa-2x"></i> Náusea ou vômito
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="nausVomNull" name="nausevomito" value="1" checked  />
+                <label for="nausVomNull">Não Há</label>
+        
+                <input type="radio" id="nausVomLeve" name="nausevomito" value="2" />
+                <label for="nausVomLeve">Leve</label>
+        
+                <input type="radio" id="nausVomMod" name="nausevomito" value="3" />
+                <label for="nausVomMod">Moderada</label>
+        
+                <input type="radio" id="nausVomSev" name="nausevomito" value="4" />
+                <label for="nausVomSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-box-tissue fa-2x"></i> Nariz entupido
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="narEntNull" name="narizEntupido" value="1" checked  />
+                <label for="narEntNull">Não Há</label>
+        
+                <input type="radio" id="narEntLeve" name="narizEntupido" value="2" />
+                <label for="narEntLeve">Leve</label>
+        
+                <input type="radio" id="narEntMod" name="narizEntupido" value="3" />
+                <label for="narEntMod">Moderada</label>
+        
+                <input type="radio" id="narEntSev" name="narizEntupido" value="4" />
+                <label for="narEntSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-toilet-paper fa-2x"></i> Diarreia
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="diarrNull" name="diarreia" value="1" checked  />
+                <label for="diarrNull">Não Há</label>
+        
+                <input type="radio" id="diarrLeve" name="diarreia" value="2" />
+                <label for="diarrLeve">Leve</label>
+        
+                <input type="radio" id="diarrMod" name="diarreia" value="3" />
+                <label for="diarrMod">Moderada</label>
+        
+                <input type="radio" id="diarrSev" name="diarreia" value="4" />
+                <label for="diarrSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-head-side-cough fa-2x"></i> Tosse com sangue
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="tosseSangueNull" name="tosseSangue" value="1" checked  />
+                <label for="tosseSangueNull">Não Há</label>
+        
+                <input type="radio" id="tosseSangueLeve" name="tosseSangue" value="2" />
+                <label for="tosseSangueLeve">Leve</label>
+        
+                <input type="radio" id="tosseSangueMod" name="tosseSangue" value="3" />
+                <label for="tosseSangueMod">Moderada</label>
+        
+                <input type="radio" id="tosseSangueSev" name="tosseSangue" value="4" />
+                <label for="tosseSangueSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-low-vision fa-2x"></i> Olhos inchados
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="olhosInchNull" name="olhosInchados" value="1" checked  />
+                <label for="olhosInchNull">Não Há</label>
+        
+                <input type="radio" id="olhosInchLeve" name="olhosInchados" value="2" />
+                <label for="olhosInchLeve">Leve</label>
+        
+                <input type="radio" id="olhosInchMod" name="olhosInchados" value="3" />
+                <label for="olhosInchMod">Moderada</label>
+        
+                <input type="radio" id="olhosInchSev" name="olhosInchados" value="4" />
+                <label for="olhosInchSev">Severa</label>
+            </div>
+
+            <label class="label">
+                <i class="fas fa-viruses fa-2x"></i> Esteve em contato com algum infectado recentemente?
+            </label>
+            
+            <div class="radio-alt">
+                <input type="radio" id="contViagNo" name="contViag" value="1" checked  />
+                <label for="contViagNo">Não</label>
+        
+                <input type="radio" id="contViagSim" name="contViag" value="2" />
+                <label for="contViagSim">Sim</label>
+
+                <input type="radio" />
+                <label class="hidden"></label>
+
+                <input type="radio" />
+                <label class="hidden"></label>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" onclick="resultado()" class="btn-success" id="teste">
+                    Calcular
+                </button>
+
+                <button type="button" onclick="location.href = 'index.html'" class="btn-secondary" >
+                    Limpar/Refazer
+                </button>
+            </div>
+
+            <div class="box-res"></div>
+
+        </form>
+
+        <section class="sec-prevencao">
+            <h1 class="title">Como se prevenir?</h1>
+
+            <div class="row">
+                
+                <div class="col">
+                    <i class="fas fa-head-side-mask fa-3x"></i>
+                    <p>Se possível fique em casa, porém caso precise sair sempre utilize máscara de proteção.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-hands-wash fa-3x"></i>
+                    <p>Lave as mãos com água e sabão frequentemente ou então higienize com álcool em gel 70%.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-head-side-cough fa-3x"></i>
+                    <p>Ao tossir ou espirrar, cubra nariz e boca com um lenço ou com a parte interna do cotovelo.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-hand-sparkles fa-3x"></i>
+                    <p>Não toque olhos, nariz, boca e a máscara de proteção sem higienizar as mãos antes.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-people-arrows fa-3x"></i>
+                    <p>Mantenha distância mínima de um metro entre pessoas em locais públicos e evite contato.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                    <p>Sempre higienize o celular, brinquedos e outros objetivos utilizados frequentemente.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-utensils fa-3x"></i>
+                    <p>Não compartilhe em hipótese alguma objetos de uso pessoal (talheres, copos, pratos, etc.).</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-head-side-virus fa-3x"></i>
+                    <p>Se estiver doente evite contato com outras pessoas, especialmente idosos.</p>
+                </div>
+    
+                <div class="col">
+                    <i class="fas fa-heartbeat fa-3x"></i>
+                    <p>Durma bem, hidrate-se, pratique exercícios físicos e mantenha uma dieta saudável.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <p>Copyright &copy; 2020-2021 | <a href="https://mateusdanieel.github.io/" target="_blank">Mateus Daniel</a> & <a href="https://www.linkedin.com/in/jos%C3%A9-felipe-silva-santos-209084194/" target="_blank">José Felipe</a></p>
+    </footer>
+    
+    <script src="dist/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/main.min.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>

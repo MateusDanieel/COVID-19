@@ -1,0 +1,276 @@
+.form {
+    background-color: #FFF;
+    padding: 20px 40px;
+    margin: 40px 80px 0;
+    box-shadow: 0 0 3px rgba($midnblue, .1);
+    display: flex;
+    flex-direction: column;
+
+    @media(--sm) {
+        margin: 20px 20px 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $midnblue;
+        text-align: center;
+    }
+
+    p {
+        color: $darkgray;
+
+        @media(--sm) {
+            text-align: center;
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    .label {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        color: $midnblue;
+        font-weight: 600;
+
+        @media(--sm) {
+            padding: 10px 0 20px;           
+        }
+
+        i {
+            color: rgba($midnblue, 0.2);
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    .radio-alt {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        input {
+            display: none;
+
+            & + label {
+                background-color: rgba($concrete, 0.2);
+                padding: 15px 0;
+                width: 23.5%;
+                font-size: 16px;
+                font-weight: 600;
+                color: $midnblue;
+                cursor: pointer;
+                text-align: center;
+                text-transform: uppercase;
+                border-radius: 4px;
+                border: 2px solid transparent;
+                transition: 0.3s;
+
+                @media(--sm) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:hover + label {
+                color: $peteriver;
+                border-color: $peteriver;
+                transition: 0.3s;
+            }
+
+            &:checked + label {
+                color: $white;
+                background-color: rgba($peteriver, 1);
+                transition: 0.3s;
+            }
+
+        }
+
+        .hidden {
+            visibility: hidden;
+
+            @media (--sm) {
+                display: none;
+            }
+        }
+    }
+
+    .btn-group {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @media(--sm) {
+            justify-content: initial;
+            flex-direction: column;
+        }
+
+        %btn {
+            width: 49%;
+            padding: 15px 30px;
+            margin: 20px 0 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            outline: none;
+            transition: 0.3s;
+
+            @media(--sm) {
+                margin: 0;
+                width: 100%;
+            }
+
+            &:hover {
+                transition: 0.3s;
+            }
+        }
+
+        .btn-success {
+            @extend %btn;
+            background-color: rgba($emerald, 1);
+            color: $white;
+
+            @media(--sm) {
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                background-color: $nephritis;
+            }
+        }
+
+        .btn-secondary {
+            @extend %btn;
+            background-color: rgba($concrete, 0.2);
+            color: $midnblue;
+
+            &:hover {
+                background-color: rgba($concrete, 0.4);
+            }
+        }
+
+
+    }
+
+    .box-res {
+        %box {
+            padding: 30px;
+            border: 2px solid;
+            margin-top: 10px;
+            border-radius: 4px;
+
+            @media(--sm) {
+                padding: 20px 20px 4px;
+            }
+
+            h1 {
+                margin: 0;
+                color: rgba(0, 0, 0, 0.7);
+            }
+
+            p {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 400;
+            }
+        }
+
+        .danger {
+            @extend %box;
+            border-color: rgba($pomegranate, 0.7);
+            background-color: rgba($alizarin, 0.3);
+        }
+
+        .warning {
+            @extend %box;
+            border-color: rgba($orange, 0.7);
+            background-color: rgba($sunflower, 0.3);
+        }
+
+        .success {
+            @extend %box;
+            border-color: rgba($nephritis, 0.7);
+            background-color: rgba($emerald, 0.3);
+        }
+        
+    }
+}
+
+.sec-prevencao {
+    margin: 40px 80px 0;
+
+    @media(--sm) {
+        margin: 20px 20px 0;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $midnblue;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .col {
+            width: 32%;
+            min-height: 186px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            background-color: #FFF;
+            box-shadow: 0 0 3px rgba($midnblue, .1);
+
+            @media (--sm) {
+                width: 100%;
+            }
+
+            &:hover {
+                i {
+                    color: $peteriver;
+                }
+            }
+
+            i {
+                color: $silver;
+                transition: 0.3s;
+            }
+
+            p {
+                color: $darkgray;
+
+                @media (--sm) {
+                    text-align: center;
+                }
+
+                b {
+                    font-weight: 700;
+                } 
+            }
+        }
+    }
+    
+
+
+
+
+
+}
