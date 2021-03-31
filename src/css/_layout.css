@@ -239,7 +239,7 @@
             background-color: #FFF;
             box-shadow: 0 0 3px rgba($midnblue, .1);
 
-            @media (--sm) {
+            @media (--xs) {
                 width: 100%;
             }
 
