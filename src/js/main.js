@@ -1,3 +1,46 @@
+/*const url = 'https://api.brasil.io/v1/dataset/covid19/caso_full/data/';
+const params = {
+    method:'GET',
+    headers: new Headers({
+        'Authorization': 'Token 53b9ab846849dfe45f293eabd8f9ab997840c83a', 
+    }),
+}
+
+fetch(url, params)
+    .then((r)=>r.json())
+    .then((json)=>{
+        console.log(json);
+    });
+*/
+
+
+async function requisitar() {
+    const url = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?format=json&is_last=True&place_type=state';
+    const params = {
+        method:'GET',
+        headers: new Headers({
+            'Authorization': 'Token 53b9ab846849dfe45f293eabd8f9ab997840c83a', 
+        }),
+    }
+
+    const r = await fetch(url, params);
+    const json = await r.json();
+
+    var texto = JSON.stringify(json.results);
+    var obj = JSON.parse(texto);
+
+    
+
+    console.log(obj)
+    
+}
+
+requisitar();
+
+
+
+
+
 //lista de sintomas e suas pontuações
 const sintomas = {
     febre:         [0, 16.5, 21.8, 29.1],   

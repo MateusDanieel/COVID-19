@@ -52,11 +52,11 @@ function css() {
 function js() {
     return src('src/js/**/*.js')
 
-    .pipe(babel({
+    /*.pipe(babel({
         presets:['@babel/env']
     }))
 
-    .pipe(jsmin())
+    .pipe(jsmin())*/
 
     .pipe(rename({
         extname:'.min.js'
