@@ -205,7 +205,7 @@
     }
 }
 
-.sec-prevencao {
+.sec-prevencao, .sec-numeros {
     margin: 40px 80px 0;
 
     @media(--sm) {
@@ -264,6 +264,38 @@
                 b {
                     font-weight: 700;
                 } 
+            }
+        }
+    }
+
+    &.sec-numeros {
+        .row {
+            .col {
+                i {
+                    color: $white;    
+                }
+
+                h1, h2 {
+                    margin: 0;
+                    font-weight: bold;
+                    color: $white; 
+                }
+
+                h2 {
+                    margin-top: 20px;
+                }
+
+                &.infectados {
+                    background-color: $peteriver;
+                }
+
+                &.recuperados {
+                    background-color: $nephritis;
+                }
+
+                &.obitos {
+                    background-color: $midnblue;
+                }
             }
         }
     }

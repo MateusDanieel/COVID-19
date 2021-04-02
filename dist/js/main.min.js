@@ -13,7 +13,6 @@ fetch(url, params)
     });
 */
 
-
 async function requisitar() {
     const url = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?format=json&is_last=True&place_type=state';
     const params = {
@@ -29,17 +28,27 @@ async function requisitar() {
     var texto = JSON.stringify(json.results);
     var obj = JSON.parse(texto);
 
-    
-
     console.log(obj)
-    
+    var strInfectados = document.getElementById('nmrInfectados');
+    var strRecuperados = document.getElementById('nmrRecuperados');
+    var strObitos = document.getElementById('nmrObitos');
+    var infectados = 0;
+    var recuperados = 0;
+    var obitos = 0;
+
+    obj.forEach((el)=>{
+        infectados += el.confirmed;
+        strInfectados.innerHTML = infectados;
+
+        recuperados += el.confirmed - el.deaths;
+        strRecuperados.innerHTML = recuperados;
+
+        obitos += el.deaths;
+        strObitos.innerHTML = obitos;
+    });
 }
 
 requisitar();
-
-
-
-
 
 //lista de sintomas e suas pontuações
 const sintomas = {
