@@ -14,7 +14,7 @@ fetch(url, params)
 */
 
 async function requisitar() {
-    const url = 'https://api.brasil.io/v1/dataset/covid19/caso/data/?format=json&is_last=True&place_type=state';
+    const url = 'https://api.brasil.io/v1/dataset/covid19/caso_full/data/?format=json&is_last=True&place_type=state';
     const params = {
         method:'GET',
         headers: new Headers({
@@ -29,22 +29,27 @@ async function requisitar() {
     var obj = JSON.parse(texto);
 
     console.log(obj)
-    var strInfectados = document.getElementById('nmrInfectados');
-    var strRecuperados = document.getElementById('nmrRecuperados');
-    var strObitos = document.getElementById('nmrObitos');
-    var infectados = 0;
-    var recuperados = 0;
-    var obitos = 0;
+    var strTotCasos = document.getElementById('nmrTotCasos');
+    var strNovCasos = document.getElementById('nmrNovCasos');
+    var strTotObitos = document.getElementById('nmrTotObitos');
+    var strNovObitos = document.getElementById('nmrNovObitos');
+    var totCasos = 0;
+    var totObitos = 0;
+    var novCasos = 0;
+    var novObitos = 0;
 
     obj.forEach((el)=>{
-        infectados += el.confirmed;
-        strInfectados.innerHTML = infectados;
+        totCasos += el.last_available_confirmed;
+        strTotCasos.innerHTML = totCasos;
 
-        recuperados += el.confirmed - el.deaths;
-        strRecuperados.innerHTML = recuperados;
+        novCasos += el.new_confirmed;
+        strNovCasos.innerHTML = novCasos;
 
-        obitos += el.deaths;
-        strObitos.innerHTML = obitos;
+        totObitos += el.last_available_deaths;
+        strTotObitos.innerHTML = totObitos;
+
+        novObitos += el.new_deaths;
+        strNovObitos.innerHTML = novObitos;
     });
 }
 

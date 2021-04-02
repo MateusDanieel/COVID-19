@@ -269,8 +269,19 @@
     }
 
     &.sec-numeros {
+        .title {
+            margin-top: -20px;
+        }
+
         .row {
             .col {
+                width: 49%;
+                min-height: auto;
+
+                @media (--xs) {
+                    width: 100%;
+                }
+
                 i {
                     color: $white;    
                 }
@@ -285,18 +296,28 @@
                     margin-top: 20px;
                 }
 
-                &.infectados {
+                &.casos {
                     background-color: $peteriver;
                 }
 
-                &.recuperados {
+                &.casos-novos {
                     background-color: $nephritis;
                 }
 
                 &.obitos {
                     background-color: $midnblue;
                 }
+
+                &.obitos-novos {
+                    background-color: $darkgray;
+                }
             }
+        }
+        
+        small {
+            display: block;
+            color: $midnblue;
+            text-align: center;
         }
     }
     
