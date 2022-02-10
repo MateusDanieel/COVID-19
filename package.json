@@ -28,7 +28,7 @@
     "postcss-custom-media": "^8.0.0"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
